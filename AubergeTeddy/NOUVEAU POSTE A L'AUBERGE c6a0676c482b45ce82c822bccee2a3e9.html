@@ -1,0 +1,638 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>NOUVEAU POSTE A L&#x27;AUBERGE</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="c6a0676c-482b-45ce-82c8-22bccee2a3e9" class="page sans"><header><img class="page-cover-image" src="NOUVEAU%20POSTE%20A%20L&#x27;AUBERGE%20c6a0676c482b45ce82c822bccee2a3e9/1576170221_5df272edd25b8-thumb.jpg" style="object-position:center 75.35000000000001%"/><h1 class="page-title">NOUVEAU POSTE A L&#x27;AUBERGE</h1></header><div class="page-body"><ul id="5ed1b039-9b20-4f63-b4de-009547b73c9b" class="toggle"><li><details open=""><summary><mark class="highlight-teal_background">STATUT: </mark></summary><ul id="1dce39cb-ab81-4849-bc60-9e2ba26a8c9f" class="toggle"><li><details open=""><summary>Statut de cadre</summary></details></li></ul><ul id="bcfe985a-c576-46d1-8b59-0920d969a6dd" class="toggle"><li><details open=""><summary>Avec certaine souplesse afin de pouvoir “travailler” dans les départements. (CF Syndicat)</summary><ul id="f5b22797-68b7-4c9d-84c7-8045fdcb8488" class="toggle"><li><details open=""><summary>Objectif : La souplesse dans le poste et ses missions a pour but de faciliter la gestion du personnel; en cas d&#x27;imprévu (renfort du staff par exemple ou pour effectuer une tâche plus exceptionnelle)</summary><ul id="5bc7ed48-ebd0-4f2e-9911-1c68cd06d251" class="bulleted-list"><li>Faire de l’observation pour trouver des solutions afin d&#x27;améliorer le flux de travail.</li></ul><ul id="0314a42b-153f-4182-aad8-874488f51d9a" class="bulleted-list"><li>Combler en cas de rush</li></ul><ul id="eb84e190-db0d-49fe-9197-5878a1bab493" class="bulleted-list"><li>Combler en cas d’absence</li></ul><ul id="54399873-6653-4348-b879-ea11ed76567d" class="bulleted-list"><li>Apporter un meilleur service à la clientèle</li></ul><ul id="676c6518-8f7e-4560-adee-fb560f87d3e6" class="bulleted-list"><li><em>Exemples:</em><ul id="ba9923bb-621b-4b8f-9b8f-e171b0391f64" class="bulleted-list"><li>Service SAM ou Bistro (heures de pointes)</li></ul><ul id="b204ecaf-7e9c-44b0-92d7-b843a7259904" class="bulleted-list"><li>Défaire les chambres (gros départs &gt; arrivée)</li></ul><ul id="c622fc99-31ef-437f-8fb5-05f9f9acef7a" class="bulleted-list"><li>Combler entre maintenance et veilleur de nuit</li></ul><ul id="72193f15-e666-402f-b5e4-1c05b19872a2" class="bulleted-list"><li>Projet de construction (comme le bar l’an passé)</li></ul><ul id="479207f8-f006-4170-80f1-7f54a0ecf65e" class="bulleted-list"><li>Entretiens des sentiers (et patinoires)?<a href="https://www.notion.so/Conditions-et-T-ches-3aaab6e01cad48d19f839285c330c7d2"> </a><mark class="highlight-teal_background"><a href="https://www.notion.so/Conditions-et-T-ches-3aaab6e01cad48d19f839285c330c7d2">[*1]</a></mark></li></ul><ul id="a1318dc0-35a9-4031-8aad-452a67f20ad0" class="bulleted-list"><li>Aides lors des tempêtes de neige?</li></ul><ul id="0d970309-ab3b-4912-b499-21d8b24ea7e2" class="bulleted-list"><li>etc..</li></ul></li></ul></details></li></ul><ul id="6a4e14e1-5dda-46ad-bf84-8874cf0b216b" class="bulleted-list"><li>Faire de l’observation dans les différents départements pour trouver des solutions afin d&#x27;améliorer le flux de travail.</li></ul><ul id="5cc7d2e2-9969-49ea-aae2-55bc50e64660" class="bulleted-list"><li>Combler en cas de rush</li></ul><ul id="571740b8-a198-4aca-a623-985ea82e918b" class="bulleted-list"><li>Combler en cas d’absence</li></ul><ul id="99078897-2803-457b-af04-2aa7c4054645" class="bulleted-list"><li>Apporter un meilleur service à la clientèle</li></ul><ul id="9edbef0a-cd39-44b7-970c-224a153a7e32" class="bulleted-list"><li><em>Exemples:</em><ul id="32311924-379b-41ee-9a6f-970634144cee" class="bulleted-list"><li>Service SAM ou Bistro (heures de pointes)</li></ul><ul id="cba429c6-43b0-418f-9baa-9df8ba6daca7" class="bulleted-list"><li>Défaire les chambres (gros départs &gt; arrivées)</li></ul><ul id="2a94aae8-48e8-475b-ab47-ff8f2c6aee34" class="bulleted-list"><li>Combler entre maintenance et veilleur de nuit</li></ul><ul id="99cd374c-3bcb-45c1-b9a1-180a881ee9f7" class="bulleted-list"><li>Projet de construction (comme le bar l’an passé)</li></ul><ul id="87d9c396-3692-46b1-91d3-bf3fc4c6567f" class="bulleted-list"><li>Entretiens des sentiers (et patinoires)? <mark class="highlight-purple_background"><a href="">[annexe] 1*</a></mark></li></ul><ul id="f396c9cb-f9c4-4890-9a0d-af5f62c21156" class="bulleted-list"><li>Aides lors des tempêtes de neige?</li></ul><ul id="e30ab14d-a3d1-4dff-af10-7ddde68f696f" class="bulleted-list"><li>etc..</li></ul></li></ul></details></li></ul></details></li></ul><hr id="2474cd63-ef56-4aa7-9064-467ed7d6afb4"/><ul id="09a25ead-5afb-4b81-a6fa-0f5936e8ae94" class="toggle"><li><details open=""><summary><mark class="highlight-teal_background">PRESENTATION DU POSTE AUPRES DU PERSONNEL:</mark></summary><p id="44e77331-f689-4016-9ac9-cf87f66a645e" class="">Je suis conscient que la présentation et officialisation du poste auprès de l&#x27;équipe des encadrants peut être délicate et risquée. Il faudrait trouver un moyen de présenter le sujet en douceur pour éviter de &quot;froisser&quot; l&#x27;égo de certaines personnes.<div class="indented"><p id="11123668-cadd-4853-a340-eafee3e4cb73" class="">Rencontre avec les responsables des différents services pour présenter la finalité de la mission confiée : </p><ul id="28cf7477-d05b-4015-be22-6b26f65868c0" class="bulleted-list"><li>Rôle d&#x27;observation et de conseil (et non de contrôle)</li></ul><ul id="12f638c9-5017-4855-a781-1428ecc38e5a" class="bulleted-list"><li>Critiquer objectivement  et proposer des solutions d&#x27;améliorations potentielles.</li></ul><ul id="0718b3c8-c895-4752-96a4-644a07c38e5d" class="bulleted-list"><li>Améliorer la coordination des différents pôles de l&#x27;Auberge.</li></ul><ul id="5bd19fec-79b2-4014-bb67-f5556369f531" class="bulleted-list"><li>Etre un un soutien et non un remplaçant (aide administrative possible).</li></ul><p id="87a7fee1-e372-4c3a-92c3-933922c01b4d" class="">
+</p></div></p></details></li></ul><hr id="15bb950d-2d44-4281-b08f-0e30c0fc65ec"/><ul id="5a2f5f4c-cb1d-49e0-835e-07ebd0976dba" class="toggle"><li><details open=""><summary><mark class="highlight-teal_background">ACCORD DE RÉMUNÉRATION ET DATES:</mark></summary><ul id="85d611d5-368a-447e-8f88-048c22d683db" class="toggle"><li><details open=""><summary>DATES :</summary><ul id="95f4fec2-9fda-4f4a-8381-53a26e667a50" class="bulleted-list"><li>Disponible à plein temps pour la mise en route du projet. Jusqu&#x27;au 4 mai, excepté 4 semaines d&#x27;école (soit <mark class="highlight-orange_background">8 février au 5 mars</mark> ou du <mark class="highlight-orange_background">8 mars au 2 avril</mark> selon avancement du Covid).</li></ul><ul id="5814f501-b545-4233-84fd-5d33eac494c1" class="bulleted-list"><li>De début mai a début juin étant à l&#x27;école pas disponible a plein temps mais éventuellement  un ou deux jours par semaine pour faire du suivi.</li></ul><ul id="cd5e2035-0a30-4e8b-a2fe-236c3b339407" class="bulleted-list"><li>Juin : retour en France, mais disponible en télétravail pour continuer le suivi du projet </li></ul><ul id="1b0ce0ea-4029-4534-901e-fe4604ac889f" class="bulleted-list"><li>Juillet- août : Percé. Disponible en télétravail pour un suivi régulier et l&#x27;organisation de conférences en visio. A discuter : venue a l&#x27;Auberge : deux/trois fois durant l&#x27;été</li></ul><ul id="79bbdba6-b3e8-4a8f-ae7c-7ea5ac3f929d" class="bulleted-list"><li>A partir de septembre : Ecole - disponible de un à trois jour par semaine selon les besoins.</li></ul><p id="9bf8ade4-7214-4807-89d5-465bc8d00aaf" class="">
+</p></details></li></ul><ul id="3f113299-82b6-4248-b82a-80e2ab537589" class="toggle"><li><details open=""><summary> ACCORD DE RÉMUNÉRATION ET AVANTAGES</summary><ul id="d5eb42d0-bed2-4691-b023-c99b3b27461c" class="toggle"><li><details open=""><summary>Comptabilisation et ventilation des heures travaillées: </summary><ul id="ae0ad512-254c-427c-a2bc-01b1c44d001f" class="bulleted-list"><li>Production dans les départements </li></ul><ul id="8036749e-d123-4e2d-8856-cee6c0ce211f" class="bulleted-list"><li>Audit et conseil </li></ul><ul id="4a3a21f2-c3ee-4c1b-8576-f601e6c5f72e" class="bulleted-list"><li>Informatique </li></ul></details></li></ul><ul id="acd45514-fd82-4539-9d28-85d3cfd63078" class="toggle"><li><details open=""><summary>Hébergements et repas:</summary><ul id="a799b9d8-3b54-44df-8e3e-f7d85e2b75aa" class="bulleted-list"><li>Séjour de longue durée:  de préférence dans un condo selon les disponibilités d&#x27;occupation de l&#x27;Auberge.</li></ul><ul id="aa4d29de-e579-4159-8ea8-7ea22036f7dc" class="bulleted-list"><li>Séjour de courte durée: en chambre</li></ul><ul id="6a79f4c3-a5a8-4495-9ceb-2406612cb8e3" class="bulleted-list"><li>Les repas sont pris en charge (conditions à débattre ensemble).</li></ul></details></li></ul><ul id="4356a9fa-050d-4fd5-9f11-e0ab419d325a" class="toggle"><li><details open=""><summary>Rémunération:</summary><p id="bd86535d-2441-47c9-9e49-e3662799212f" class="">Je te propose d&#x27;en parler directement, pas vraiment d&#x27;idée a ce sujet. Comme évoqué au départ, sans savoir si le projet va aboutir je ne veux pas être une charge inutile pour l&#x27;auberge. Il faudrait donc trouver un compromis.</p><p id="e999768f-25be-4c13-aee4-05a6fc59ec9b" class="">A discuter</p></details></li></ul></details></li></ul><p id="2ff0688c-9f65-411e-8f1b-f4295409a2fb" class="">
+</p></details></li></ul><hr id="d70fef86-270a-46fc-82f4-fb9252e9d070"/><ul id="d089717a-860a-4245-aed3-bbf016a17648" class="toggle"><li><details open=""><summary><mark class="highlight-teal_background">MISSIONS:</mark></summary><ul id="c7461fd5-d4d5-4b88-8879-e9ceeb5d0faf" class="toggle"><li><details open=""><summary>Audit:</summary><ul id="3f593766-72be-44df-8fe3-f25eb29cac5c" class="bulleted-list"><li>Assister au morning meeting</li></ul><ul id="a5c40193-3cfb-4f48-84d9-646710b7d72d" class="bulleted-list"><li>Etre en copie des passations</li></ul><ul id="d9fdfd3e-35d9-4fd0-9791-6b3863ca527f" class="bulleted-list"><li>Etre en copie des communications entre les départements (<em>réservations/animation, réception/réservations, ...).</em></li></ul><ul id="00fa558a-6c3a-442b-9d05-2be3931d0aba" class="bulleted-list"><li>Analyse des outils de gestions de chaque gestionnaire (<em>fichiers Excel, liste journalières, ...</em>)</li></ul><ul id="52ac68ee-6efa-4923-8bfa-b4a89de48e77" class="bulleted-list"><li>etc ...</li></ul></details></li></ul><p id="bbb54d1c-e494-4a56-a18b-9bb89cd86862" class="">
+</p><ul id="5b1a0d76-5816-412a-b460-cd6f4784c86b" class="toggle"><li><details open=""><summary>Ressources humaines:</summary><ul id="9e75050d-e4b0-417b-bbc0-7ad7516997ef" class="bulleted-list"><li>Entretien avec les employés souhaitant partager leurs idées, remarques, critiques, objectifs personnel, etc... (Accord de 15 à 30 minutes, présentation d&#x27;un liste lors de la rencontre).</li></ul><ul id="d48de56a-4e0d-4e29-ae16-52681ac50d7d" class="bulleted-list"><li>Recherches de solutions afin de fidéliser les employés (meilleures communications, respect des engagements, etc.)</li></ul><p id="f815be31-97f3-4118-926d-e5b5b5dba4c1" class="">
+</p></details></li></ul><p id="6f48c6b8-f58b-4458-b74f-f2bf14ccb048" class="">
+</p><ul id="7e6124fa-3c6b-4d4f-a31c-b19ac1d9c10a" class="toggle"><li><details open=""><summary>Listing de solutions potentielles constaté:</summary><ul id="0c7ea874-01b5-41b5-b12f-fd6292ed3872" class="toggle"><li><details open=""><summary>Recensement des interventions et problèmes:</summary><ul id="9f77f91b-8b3b-4799-90ce-853cfc56d833" class="bulleted-list"><li>Faire un « log » de toutes les demandes d’interventions et de demandes clients pour tout les départements. Pourquoi?<ul id="2c9cde53-cd8f-4543-bfa3-57d9a936d61a" class="bulleted-list"><li>Faire des statistiques et pouvoir anticiper des besoin humains a l’avenir</li></ul><ul id="86806da3-ddd9-4b49-9b12-44fddc5285f9" class="bulleted-list"><li>Mettre en place des procédures et les solutions au problèmes éventuels, qui pourras servir a la formation des nouveaux employés et qui pourrais même a long terme servir au client… (faites de videos et/ou « tutoriel » numérique).</li></ul></li></ul></details></li></ul><ul id="855977e3-218c-4c79-b597-4ea7ef7d07ae" class="toggle"><li><details open=""><summary>Numérisation des outils des gestions.</summary></details></li></ul><ul id="0302f4c2-6eb4-4063-b73d-981017fdd81f" class="toggle"><li><details open=""><summary>Création d&#x27;un organigramme de l&#x27;auberge</summary></details></li></ul><ul id="659d7c1b-4a64-4e7a-a6d2-523d6b449d11" class="toggle"><li><details open=""><summary>Coaching pour un meilleur encadrement et organisation des équipes.</summary></details></li></ul><ul id="3a23cc39-7839-443e-b2cc-f3332a9d399c" class="toggle"><li><details open=""><summary>Outils de gestions de tâches pour les équipes &quot;actives&quot;</summary></details></li></ul><p id="f34563ac-4ad2-460a-bfe6-92aadb048f99" class="">
+</p></details></li></ul><ul id="7ed5e5e7-2f39-4925-85b7-319ea326f270" class="toggle"><li><details open=""><summary>Informatique:</summary><ul id="005b9407-f436-4b05-9bf2-63f574f64661" class="toggle"><li><details open=""><summary>Recensement des logiciels actuels:</summary><ul id="c44bde98-c8f9-4036-b1ec-9fd97a6338c3" class="bulleted-list"><li>Par qui?</li></ul><ul id="2fdfc022-6810-41ea-9dc1-47e0f1e251bc" class="bulleted-list"><li>Pourquoi?</li></ul><ul id="9a1a1c2e-ec3e-4358-93ba-7546a0e9dd6f" class="bulleted-list"><li>Liaison entres eux?</li></ul><ul id="c9c6070d-b633-49e7-a784-20e99dfdb2ae" class="bulleted-list"><li>Coût actuels?</li></ul></details></li></ul><ul id="c0d6c7a4-8c15-466b-9590-3fd914327563" class="toggle"><li><details open=""><summary>Nouveaux logiciels envisagés:</summary><ul id="24c45501-bf43-47ea-9023-aec78b108cee" class="bulleted-list"><li>Choix effectués?</li></ul><ul id="af1263ef-8352-476d-829e-71f54c33d547" class="bulleted-list"><li>Quels sont les besoins recherchés?</li></ul></details></li></ul><ul id="41e23724-6900-4ee6-9f05-acc421627244" class="toggle"><li><details open=""><summary>Outils proposés:</summary><ul id="ca510f8d-5ca2-47be-8315-96551e428e1f" class="bulleted-list"><li>Web App pour communication internes et recensement des &quot;problèmes&quot;</li></ul><ul id="f315e5e1-10df-4ea2-86d5-30e1f1a8a825" class="bulleted-list"><li>Web App pour gestions diverses:<ul id="f43215e4-f982-47c7-b75c-ebdc0d37e185" class="bulleted-list"><li>Location du matériel pour l&#x27;animation</li></ul><ul id="235878ff-5ada-4cc5-b770-1f0008ef6140" class="bulleted-list"><li>Garde fou selon la météo, ou autre <em>(annuler locations fatbike lors des tempêtes de neige, non arrosage lors de température positive, ...)</em></li></ul><ul id="67467b51-73a1-47b1-91e3-641b9a537888" class="bulleted-list"><li>Automatisation des déclenchements de taches selon les saisons.</li></ul></li></ul></details></li></ul><p id="689c2be1-495a-4e45-84ca-aca614b6f033" class="">
+</p></details></li></ul></details></li></ul><hr id="1f4b83fa-3271-431f-993e-9609c962c655"/><ul id="9f53ae8d-d480-4232-98d0-6ceb69ddf3b0" class="toggle"><li><details open=""><summary><mark class="highlight-teal_background">CONSTAT NEGATIF:</mark></summary><ul id="48635ab4-502b-4902-b9cb-bdccb292950a" class="bulleted-list"><li>Démotivation des employés</li></ul><ul id="8d03cd91-ebd4-43ee-98d8-c21b1ba64394" class="bulleted-list"><li>Problèmes de communications interne entre les différents acteurs (employés, cadres, pôles)</li></ul><ul id="d7620017-9473-4a65-8629-c8fdf2fada82" class="bulleted-list"><li>Non respect des engagements.</li></ul><ul id="520418fa-3278-4dfd-9fb9-5899fbaab782" class="bulleted-list"><li>Problèmes évoqués non solutionnés objectivement, dédouanement de chaque départements. <em>Exemples:</em><ul id="bb11865f-896f-4aaa-b26e-ffb94ea1ce93" class="bulleted-list"><li>signalisation des glissades</li></ul><ul id="40e770e7-bb5f-46c1-8858-d994030e9c2f" class="bulleted-list"><li><em>arrosages des patinoires</em></li></ul><ul id="0925c86d-c1a8-4b4c-a177-21d268e71c05" class="bulleted-list"><li><em>poignées de portes patios</em></li></ul></li></ul><p id="6ff727f6-34d4-4740-909d-c367869a2e65" class="">
+</p></details></li></ul><hr id="8786dfbc-6181-4215-85bd-502b6efb784d"/><hr id="3c5105d7-d483-43c2-90cb-05886c430fb7"/><ul id="d469122d-3553-4768-96ae-3c86e91fd819" class="toggle"><li><details open=""><summary><mark class="highlight-purple_background">ANNEXE: </mark></summary><ul id="353f1891-2e48-4c12-ba25-f52d760fa27b" class="toggle"><li><details open=""><summary>[*1] Concernant ce point plusieurs remarques:</summary><ul id="a5f0d764-7b7b-4954-8bb1-f01f5d45794f" class="bulleted-list"><li>A titre personnel ça me fait du bien d’aller sur les sentiers :D</li></ul><ul id="d313f165-0835-4122-883a-7939ba5c9a83" class="bulleted-list"><li>Ca permet aussi de faire un suivi et entretien des ses sentiers qui est un argument de vente majeur de l&#x27;Auberge</li></ul><ul id="8e245367-2e86-43c9-8d9b-4a4b80941056" class="bulleted-list"><li>Limiter le nombre de personnes qui utilisent la machinerie.</li></ul><ul id="a778874f-977d-4c36-92f0-c9fc142b9b2b" class="bulleted-list"><li>Avoir les sentiers prêts dès le matin, et les patinoires le soir.</li></ul></details></li></ul><p id="1960b0f5-5372-4082-9336-98ceadddcc86" class="">
+</p></details></li></ul><p id="ddf1ba13-a82b-417a-81ab-f219448f20d3" class="">
+</p></div></article></body></html>
